@@ -1,15 +1,14 @@
-from colors import Color
 from colors.utils.color_utils import is_rgb_color, parse_rgb, interpolate_color
 
 
-def apply_gradient(message: str, style: str, fg_colors: list[str], bg_colors: list[str], color_obj: Color):
+def apply_gradient(message: str, style: str, fg_colors: list[str], bg_colors: list[str], color_obj):
     """
     Apply a smooth RGB gradient to each character of a message.
 
     Example:
         >>> gradient_text = apply_gradient("Hello", "\\033[1m",
         ...                                ["\\033[38;2;255;0;0m", "\\033[38;2;0;0;255m"],
-        ...                                color_obj)
+        ...                                color_obj=color_obj)
         >>> print(gradient_text)
     """
     if not fg_colors and not bg_colors:

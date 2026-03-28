@@ -1,11 +1,10 @@
 import shutil
 
-from colors import Color
 from colors.utils.text_utils import wrap_text, vertical_center
 from colors.utils.color_utils import parse_bg_color, generate_gradient
 
 
-def format_block(message: str, width: int=None, height: int=5, bg_colors: list[str]=None, text_color: str=None, color_obj: Color=None,):
+def format_block(message: str, width: int=None, height: int=5, bg_colors: list[str]=None, text_color: str=None, color_obj=None,):
     """
     Format a centered text block with optional gradient background and colored text.
 
