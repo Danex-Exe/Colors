@@ -1,7 +1,16 @@
+from colors import Color
 from colors.utils.color_utils import is_rgb_color, is_basic_color
 
 
-def apply_simple(message, color, style, color_obj):
+def apply_simple(message: str, color: str, style: str, color_obj: Color):
+    """
+    Apply a single color and/or style to the entire message
+
+    Example:
+        >>> from colorama import Fore
+        >>> result = apply_simple("Hello", "\\033[31m", "\\033[1m", color_obj)
+        >>> print(result)  # outputs red bold "Hello" followed by reset
+    """
     parts = []
 
     if style:
