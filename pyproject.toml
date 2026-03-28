@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "colors"
+version = "1.0.0"
+description = "A Python package for colored terminal output with gradients and blocks"
+readme = "docs/README.md"
+requires-python = ">=3.6"
+authors = [
+    {name = "Daniil Alekseev", email = "dan.d.alekseev@gmail.com"},
+]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+colors = "colors.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Danex-Exe/Colors"
